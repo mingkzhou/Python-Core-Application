@@ -16,7 +16,7 @@ class MyThread(threading.Thread):
 
     def run(self):
         print('starting {} at {}'.format(self.name, ctime()))
-        self.res = self.func(self.args)
+        self.res = self.func(*self.args)
         print('{} finished at {}'.format(self.name, ctime()))
 
     def getResult(self):
