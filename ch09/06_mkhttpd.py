@@ -6,7 +6,7 @@
 python2 中BaseHTTPServer,SampleHTTPServer,CGIHTTPServer模块在python3中合并到http.client中
 """
 
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
 class MyHandler(BaseHTTPRequestHandler):
     def do_GET(self):

@@ -29,6 +29,7 @@ def request_version(url):
 for funcType in ('handler', 'request'):
     print('*** Using {}:'.format(funcType.upper()))
     url = eval('{}_version'.format(funcType))(URL)
+    print(url)
     f = urllib.request.urlopen(url)
     print(str(f.readline(), 'utf-8'))
     f.close()
